@@ -1,0 +1,22 @@
+let tuiles = [
+  {id=0; haut=1; bas=2; gauche=1; droite=2};
+  {id=1; haut=1; bas=2; gauche=2; droite=3};
+  {id=2; haut=1; bas=2; gauche=3; droite=4};
+  {id=3; haut=1; bas=2; gauche=4; droite=5};
+
+  {id=4; haut=2; bas=3; gauche=1; droite=2};
+  {id=5; haut=4; bas=3; gauche=2; droite=3};
+  {id=6; haut=4; bas=3; gauche=3; droite=4};
+  {id=7; haut=4; bas=3; gauche=4; droite=5};
+
+  {id=8; haut=3; bas=4; gauche=1; droite=2};
+  {id=9; haut=3; bas=4; gauche=3; droite=3};
+  {id=10; haut=1; bas=4; gauche=3; droite=4};
+  {id=11; haut=2; bas=4; gauche=9; droite=8};
+
+  {id=12; haut=4; bas=5; gauche=1; droite=2};
+  {id=13; haut=5; bas=5; gauche=2; droite=3};
+  {id=14; haut=5; bas=4; gauche=3; droite=4};
+  {id=15; haut=4; bas=2; gauche=7; droite=3};
+] in
+let n = 4 in

@@ -1,0 +1,55 @@
+Tetravex SAT - Mode d'emploi
+=============================
+
+Ce programme permet de résoudre des instances du jeu Tetravex à l’aide d’un solveur SAT,
+puis de visualiser la solution grâce à une interface graphique en Python.
+
+----------------------------------------------------------
+📁 ORGANISATION DU PROJET
+----------------------------------------------------------
+
+- tetravex_sat.ml : le code OCaml qui génère les clauses SAT au format DIMACS.
+- ex_inputs/ : dossier contenant plusieurs exemples d'entrées Tetravex prêtes à l'emploi (au format OCaml).
+- tuiles/ : dossier contenant les fichiers JSON associés à chaque exemple (pour l'affichage graphique).
+- tetravex.cnf : fichier DIMACS généré à partir d'une entrée.
+- result.sat : fichier produit par le solveur SAT contenant la solution.
+- interface.py : affiche la solution dans une fenêtre graphique.
+
+----------------------------------------------------------
+🎯 UTILISATION ÉTAPE PAR ÉTAPE
+----------------------------------------------------------
+
+1. 🔁 Choisir une instance Tetravex
+   - Aller dans le dossier ex_inputs/ et ouvrir un des fichiers OCaml.
+   - Copier le bloc 'let tuiles = [...]' et 'let n = ...'
+
+2. 📥 Coller l’entrée dans 'tetravex_sat.ml'
+   - Remplacer l’entrée existante dans 'tetravex_sat.ml' par celle que vous avez copiée.
+
+3. 🏗️ Générer les clauses SAT :
+   ocaml tetravex_sat.ml
+
+   Cela produit :
+   - tetravex.cnf → problème SAT au format DIMACS
+
+4. ✅ Résoudre avec le solveur SAT (ex : HAL) :
+   ./hal tetravex.cnf -s result.sat
+
+5. 👁️ Afficher la solution avec l’interface graphique :
+   - tuiles/[tailleGrille].json → fichier des tuiles à choisir et à mettre dans le code 'interface.py' (à la ligne 90)
+   /!\ Attention : Le fichier doit correspondre exactement aux entrées choisies lors de la génération des clauses.
+	Exemple :
+	Si vous générez le format DIMACS des entrées du fichier 'ex_inputs/3x3', vous devez utiliser le fichier 'tuiles/tuiles_3x3.json'
+	dans 'interface.py'.
+   
+	Pour exécuter :
+	python3 interface.py
+
+   ➜ La grille Tetravex est affichée, chaque tuile colorée selon ses bords.
+
+----------------------------------------------------------
+💡 REMARQUES
+----------------------------------------------------------
+
+- Chaque exemple dans ex_inputs/ correspond à un fichier 'tuiles/tuiles_XxX.json' pour l'affichage.
+- Appuyez sur ESC dans l'interface pour quitter.

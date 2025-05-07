@@ -1,0 +1,4 @@
+c Simple satisfiable test
+c expected: 0 1
+p cnf 2 1
+-1 2 0

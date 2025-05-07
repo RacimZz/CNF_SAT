@@ -1,0 +1,9 @@
+(* Input associé au fichier tuiles/tuiles_2x2.json *)
+
+let tuiles = [
+  {id=0; haut=1; bas=2; gauche=1; droite=2};
+  {id=1; haut=1; bas=2; gauche=2; droite=3};
+  {id=2; haut=2; bas=3; gauche=1; droite=2};
+  {id=3; haut=2; bas=3; gauche=2; droite=3};
+] in
+let n = 2 in
