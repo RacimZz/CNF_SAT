@@ -1,3 +1,15 @@
+# 🧩 Tetravex-SAT
+
+[![Build](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/<ton-user>/<ton-repo>/actions)
+[![OCaml](https://img.shields.io/badge/OCaml-≥4.10-blue)](https://ocaml.org/)
+[![Python](https://img.shields.io/badge/Python-≥3.6-yellow)](https://python.org)
+[![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
+
+**Tetravex-SAT** est une application permettant de résoudre automatiquement des grilles du jeu Tetravex en traduisant le problème sous forme logique (SAT), puis en l'interprétant via un solveur SAT. Le projet allie programmation fonctionnelle (OCaml), algorithmique logique (SAT), et interface graphique (Python + pygame).
+
+ℹ️ Le mode d’emploi détaillé est disponible dans le fichier [`LISEZMOI.txt`](./LISEZMOI.txt).
+
+---
 
 ### 🔧 PRÉREQUIS
 
@@ -46,4 +58,5 @@ python3 interface.py
 - les tuiles depuis `tuiles_[tailleGrille].json`
 - et la solution SAT depuis `result.sat`
 
----
+### **Auteurs**
+Racim ZENATI - Augustin MANIAK - Arris ZAIDI
